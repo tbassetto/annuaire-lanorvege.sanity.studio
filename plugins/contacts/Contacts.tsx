@@ -22,7 +22,6 @@ export const Contacts = () => {
     }`
 
     client.fetch(query).then((contacts: Contact[]) => {
-      console.log('Bikes with more than one seat:', contacts)
       contacts.sort((a, b) => a.name.localeCompare(b.name))
       setContacts(contacts)
     })
