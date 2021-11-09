@@ -58,10 +58,10 @@ export const Overview = () => {
         Header: 'Logo',
         accessor: 'logo',
         Cell: ({value}) =>
-          value && value._type === 'image' ? (
-            'oui'
-            // <img src={urlFor(value).width(140).height(70).fit('max').url()} />
-          ) : 'non',
+          value && value._type === 'image'
+            ? 'oui'
+            : // <img src={urlFor(value).width(140).height(70).fit('max').url()} />
+              'non',
       },
       {
         Header: 'Présence',
@@ -71,6 +71,10 @@ export const Overview = () => {
         Header: 'Adresse',
         accessor: 'location',
         Cell: ({value}) => (value ? <div>{value}</div> : null),
+      },
+      {
+        Header: 'Région',
+        accessor: 'fylke',
       },
       {
         Header: 'Coordonnées',
@@ -125,7 +129,7 @@ export const Overview = () => {
           <Heading as="h1" size={5}>
             {entities.length} Entities 👀
           </Heading>
-          <Text>{entities.filter(e => e.published).length} visibles</Text>
+          <Text>{entities.filter((e) => e.published).length} visibles</Text>
         </Stack>
       </Card>
 
