@@ -1,6 +1,7 @@
-import {Box, Card, Code, Container, Heading, Inline, Stack, Text, TextArea} from '@sanity/ui'
+import {Card, Code, Container, Heading, Inline, Stack, Text, TextArea} from '@sanity/ui'
 import studioClient from 'part:@sanity/base/client'
 import * as React from 'react'
+import {useEffect} from 'react'
 
 const client = studioClient.withConfig({apiVersion: 'v2021-03-25', dataset: 'production'})
 
@@ -12,7 +13,7 @@ interface Contact {
 }
 export const Contacts = () => {
   const [contacts, setContacts] = React.useState<Contact[]>()
-  React.useEffect(() => {
+  useEffect(() => {
     // b93d201b-90b4-4485-9d5b-3edc99a94dd1 is my test company
     const query = `*[_type == "entity" && !(_id in path('drafts.**')) && _id != "b93d201b-90b4-4485-9d5b-3edc99a94dd1"] {
       _id,
@@ -63,16 +64,16 @@ export const Contacts = () => {
                       <a href={`mailto:${contact.primaryContact}`}>{contact.name}</a>
                     </Heading>
                     <Stack space={2}>
-                    <Inline space={1}>
-                      <Text size={1}>URL:</Text>
-                      <Code size={1}>
-                        https://annuaire.lanorvege.no/modification?id={contact._id}
-                      </Code>
-                    </Inline>
-                    <Inline space={2}>
-                      <Text size={1}>Mot de passe:</Text>
-                      <Code size={1}>{contact.password}</Code>
-                    </Inline>
+                      <Inline space={1}>
+                        <Text size={1}>URL:</Text>
+                        <Code size={1}>
+                          https://annuaire.lanorvege.no/modification?id={contact._id}
+                        </Code>
+                      </Inline>
+                      <Inline space={2}>
+                        <Text size={1}>Mot de passe:</Text>
+                        <Code size={1}>{contact.password}</Code>
+                      </Inline>
                     </Stack>
                   </Stack>
                 </Card>
