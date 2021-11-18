@@ -312,7 +312,7 @@ export default {
       title: 'Coordonnées',
       name: 'coordinate',
       hidden: hideIfOnlineOnly,
-      description: 'On peut utiliser https://www.latlong.net/convert-address-to-lat-long.html',
+      description: 'On peut utiliser https://docs.mapbox.com/playground/geocoding/',
       type: 'geopoint',
     },
   ],
