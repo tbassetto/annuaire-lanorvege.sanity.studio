@@ -134,7 +134,8 @@ export default {
               initialValue: 'https://',
               validation: (Rule) =>
                 Rule.required().custom((url) => {
-                  return url.indexOf('https://') === 0 ? true : 'Le format accepté est https://xxx'
+                  const re = new RegExp('^(http|https)://', 'i')
+                  return re.test(url) ? true : 'Le format accepté est https://xxx'
                 }),
             },
           ],
