@@ -16,22 +16,22 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.29.1",
+    "@sanity/base": "^2.29.2",
     "@sanity/components": "^2.14.0",
     "@sanity/core": "^2.28.1",
-    "@sanity/default-layout": "^2.29.1",
-    "@sanity/default-login": "^2.29.1",
-    "@sanity/desk-tool": "^2.29.1",
+    "@sanity/default-layout": "^2.29.2",
+    "@sanity/default-login": "^2.29.2",
+    "@sanity/desk-tool": "^2.29.2",
     "@sanity/icons": "^1.2.5",
     "@sanity/image-url": "^1.0.1",
     "@sanity/ui": "^0.37.5",
-    "@sanity/vision": "^2.29.1",
+    "@sanity/vision": "^2.29.2",
     "omgopass": "^3.2.1",
     "prop-types": "^15.8",
     "react": "^17.0",
     "react-dom": "^17.0",
     "react-icons": "^4.3.1",
     "react-table": "^7.7.0",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.5"
   }
 }

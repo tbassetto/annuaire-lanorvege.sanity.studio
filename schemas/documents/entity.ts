@@ -242,30 +242,10 @@ export default {
       ],
     },
     // {
-    //   name: 'photo',
-    //   type: 'mainImage',
-    //   title: 'Photo (devanture, produits, flyer, etc.)',
-    // },
-    // {
     //   name: 'description',
     //   type: 'bodyPortableText',
     //   title: 'Description complète',
     //   description: 'Pas encore utilisé !',
-    // },
-    // {
-    //   title: 'Tags',
-    //   name: 'tags',
-    //   type: 'array',
-    //   hidden: true,
-    //   description: 'Used to link entities together / to find related entities',
-    //   of: [
-    //     {
-    //       type: 'string',
-    //     },
-    //   ],
-    //   options: {
-    //     layout: 'tags',
-    //   },
     // },
     {
       title: 'Présence',
@@ -279,6 +259,12 @@ export default {
         ],
         layout: 'radio',
       },
+    },
+    {
+      title: 'Adresse postale',
+      name: 'location',
+      hidden: hideIfOnlineOnly,
+      type: 'string',
     },
     {
       title: 'Région',
@@ -302,12 +288,6 @@ export default {
           {title: 'N/A', value: 'na'},
         ],
       },
-    },
-    {
-      title: 'Adresse postale',
-      name: 'location',
-      hidden: hideIfOnlineOnly,
-      type: 'string',
     },
     {
       title: 'Coordonnées',
